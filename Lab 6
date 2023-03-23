@@ -1,0 +1,30 @@
+def encode(password):
+    encode_pass = ''
+    for num in str(password):
+        encoded_num = int(num) + 3
+        encode_pass += str(encoded_num)
+    encode_pass = int(encode_pass)
+    return encode_pass
+
+
+code = True
+while code:
+    print()
+    print('Menu')
+    print(r'-------------')
+    print('1. Encode\n2. Decode\n3. Quit')
+    print()
+    option = int(input('Please enter an option:'))
+    if option == 1:
+        password = input('Please enter your password to encode:')
+        encoded_password = encode(password)
+        print('Your password has been encoded and stored!')
+        print()
+    if option == 2:
+        encoded_password = encode(password)
+        print('The encoded password is', encoded_password, ', and the original password is', password, end='.')
+        print()
+        print()
+    if option == 3:
+        code = False
+
